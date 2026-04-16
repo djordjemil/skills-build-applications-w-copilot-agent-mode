@@ -1,0 +1,217 @@
+/* ── Global ───────────────────────────────────────────────── */
+:root {
+  --octo-blue:    #0d6efd;
+  --octo-purple:  #6610f2;
+  --octo-teal:    #0dcaf0;
+  --octo-green:   #28a745;
+  --octo-bg:      #eef2ff;
+  --octo-text:    #1e2a3a;
+  --octo-muted:   #5a6a82;
+}
+
+body {
+  background-color: var(--octo-bg);
+  color: var(--octo-text);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+/* ── Navbar ───────────────────────────────────────────────── */
+.navbar {
+  background: linear-gradient(90deg, #0d1b2a 0%, #1b2e4b 100%) !important;
+  box-shadow: 0 2px 12px rgba(13, 110, 253, 0.25);
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: #ffffff !important;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar-brand img {
+  height: 42px;
+  width: 42px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--octo-teal);
+}
+
+.navbar-brand span {
+  background: linear-gradient(90deg, #63d4fc, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-weight: 500;
+  padding: 0.5rem 0.9rem !important;
+  border-radius: 0.4rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #ffffff !important;
+  background-color: rgba(99, 212, 252, 0.15) !important;
+}
+
+/* ── Hero ─────────────────────────────────────────────────── */
+.hero-section {
+  background: linear-gradient(135deg, #0d6efd 0%, #6610f2 100%);
+  color: white;
+  padding: 4.5rem 0;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('octofitapp-small.png') center/300px no-repeat;
+  opacity: 0.05;
+}
+
+.hero-section h1 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  opacity: 0.92;
+}
+
+.hero-section .btn-light {
+  color: var(--octo-blue);
+  font-weight: 700;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* ── Cards ────────────────────────────────────────────────── */
+.card {
+  border: none;
+  border-radius: 0.9rem;
+  box-shadow: 0 2px 12px rgba(13, 110, 253, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(13, 110, 253, 0.16);
+}
+
+.card .card-header {
+  border-radius: 0.9rem 0.9rem 0 0 !important;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.feature-card .card-body {
+  padding: 1.75rem 1.5rem;
+}
+
+.feature-card .card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--octo-text);
+}
+
+.feature-card .card-text {
+  color: var(--octo-muted);
+}
+
+.feature-card .display-6 {
+  font-size: 2.2rem;
+  margin-bottom: 0.75rem;
+}
+
+/* ── Tables ───────────────────────────────────────────────── */
+.table {
+  margin-bottom: 0;
+}
+
+.table-responsive {
+  border-radius: 0 0 0.9rem 0.9rem;
+  overflow: hidden;
+}
+
+.table thead th {
+  border-top: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  color: var(--octo-muted);
+  background-color: #f4f6ff;
+  padding: 0.85rem 1rem;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #edf2ff;
+}
+
+/* ── Badges ───────────────────────────────────────────────── */
+.badge {
+  font-size: 0.8rem;
+  padding: 0.38em 0.7em;
+  border-radius: 0.4rem;
+  font-weight: 600;
+}
+
+/* ── Buttons ──────────────────────────────────────────────── */
+.btn-primary {
+  background: linear-gradient(135deg, var(--octo-blue), var(--octo-purple));
+  border: none;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(13, 110, 253, 0.3);
+  transition: box-shadow 0.2s, transform 0.15s;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 4px 14px rgba(13, 110, 253, 0.45);
+  transform: translateY(-1px);
+  background: linear-gradient(135deg, var(--octo-blue), var(--octo-purple));
+  border: none;
+}
+
+/* ── Headings ─────────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--octo-text);
+  font-weight: 700;
+}
+
+/* ── Links ────────────────────────────────────────────────── */
+a {
+  color: var(--octo-blue);
+}
+
+a:hover {
+  color: var(--octo-purple);
+}
+
+/* ── Spinner ──────────────────────────────────────────────── */
+.spinner-border {
+  width: 2.5rem;
+  height: 2.5rem;
+}
